@@ -1,0 +1,2087 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /* Hero Section */
+    .download-hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px;
+        max-width: 1200px;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+
+    /* Left content */
+    .download-hero-left {
+        flex: 1;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 10;
+    }
+
+    .download-hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        z-index: 15;
+    }
+
+    .download-hero-description {
+        font-size: 2rem;
+        font-weight: 200;
+        margin-bottom: 30px;
+        line-height: 1.6;
+        z-index: 15;
+        color: black;
+    }
+
+    .download-buttons {
+        height: 50px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        z-index: 10;
+    }
+
+    .download-link-text {
+        text-decoration: none;
+        background-color: #7dfd6c;
+        color: #202d38;
+        font-weight: 600;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-align: center;
+        width: fit-content;
+        transition: background 0.3s;
+    }
+
+    .download-link-text:hover {
+        background-color: #0da755;
+    }
+
+    .download-store-btn {
+        height: 50px;
+        width: 250px;
+        z-index: 10;
+    }
+
+    /* Device section */
+    .download-device {
+        position: relative;
+        width: 300px;
+        height: 600px;
+        flex-shrink: 0;
+        margin-top: 30px;
+        background-color: transparent;
+        z-index: 2;
+    }
+
+    /* App screen image */
+    .download-device-screen {
+        position: absolute;
+        top: 60%;
+        left: -150%;
+        width: 59%;
+        height: 59%;
+        border-radius: 20px;
+        object-fit: contain;
+        z-index: 13;
+    }
+
+    /* Frame container to help with cropping */
+    .download-frame-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 22px;
+        overflow: visible;
+    }
+
+    /* Frame stays on top */
+    .download-device-frame {
+        position: absolute;
+        top: 90%;
+        left: -120%;
+        transform: translate(-50%, -50%);
+        width: 200%;
+        height: 80%;
+        object-fit: contain;
+        z-index: 20;
+        border-radius: 22px;
+        pointer-events: none;
+    }
+
+    /* Laptop wrapper - if ever used later */
+    .download-laptop {
+        position: absolute;
+        width: 1000px;
+        height: 800px;
+        top: 100px;
+        left: 65%;
+        transform: translateX(-50%);
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .download-laptop-screen {
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        width: 70%;
+        height: 57%;
+        object-fit: cover;
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+    .download-laptop-frame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300%;
+        height: 100%;
+        object-fit: contain;
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    /* Media Query: Mobile Responsive */
+    @media (max-width: 768px) {
+        .download-hero {
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .download-hero-left {
+            align-items: center;
+            max-width: 100%;
+        }
+
+        .download-buttons {
+            align-items: center;
+        }
+
+        .download-device {
+            margin-top: 40px;
+            width: 250px;
+            height: 500px;
+        }
+
+        .download-device-frame {
+            width: 250%;
+            height: auto;
+            left: -100%;
+            top: 85%;
+        }
+
+        .download-device-screen {
+            top: 50%;
+            left: -130%;
+            width: 60%;
+        }
+    }
+
+    /* Optional: Wider screens */
+    @media (min-width: 1400px) {
+        .download-hero {
+            max-width: 1400px;
+            padding: 80px 100px;
+        }
+    }
+
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to bottom, #e4f0ff, #ffffff);
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .personal-contact {
+        position: relative;
+        padding: 6rem 0;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .personal-contact::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:
+            linear-gradient(to bottom, rgba(244, 248, 255, 0.6), rgba(255, 255, 255, 0.7)),
+            url('pokemon.jpg') no-repeat center/cover;
+        z-index: -1;
+    }
+
+    .personal-contact-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 30px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.07);
+        padding: 4rem;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(3px);
+    }
+
+    .personal-contact-wrapper:hover {
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+        transform: scale(1.002);
+    }
+
+    .personal-contact-info {
+        flex: 1 1 300px;
+        padding-right: 2rem;
+        text-align: center;
+        border-right: 1px solid #eaeaea;
+    }
+
+    .personal-contact-avatar {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 1.5rem;
+        background: url('https://www.escapistmagazine.com/wp-content/uploads/2024/02/captain-hat-pikachu-pokemon-go.jpg') no-repeat center/cover;
+        border-radius: 50%;
+        border: 3px solid #3b4cca;
+        box-shadow: 0 4px 12px rgba(59, 76, 202, 0.3);
+    }
+
+    .personal-contact-info h3 {
+        font-size: 1.8rem;
+        color: #2b2e4a;
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+    }
+
+    .personal-contact-info p {
+        font-size: 1rem;
+        color: #666;
+        margin: 0.4rem 0;
+        line-height: 1.6;
+    }
+
+    .personal-contact-form {
+        flex: 1 1 350px;
+        padding-left: 2rem;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Animated background added */
+    .form-animated-bg {
+        background: linear-gradient(-45deg, #fdfbfb, #ebedee, #dfe9f3, #f0f3ff);
+        background-size: 400% 400%;
+        animation: gradientShift 10s ease infinite;
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .personal-contact-form h3 {
+        font-size: 1.8rem;
+        color: #2b2e4a;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+    }
+
+    .personal-contact-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .personal-contact-form input,
+    .personal-contact-form textarea,
+    .personal-contact-form select {
+        padding: 1rem 1.2rem;
+        border: 1px solid #d1d9e6;
+        border-radius: 14px;
+        font-size: 1rem;
+        background: #f8faff;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+        transition: all 0.3s ease;
+    }
+
+    .personal-contact-form input:focus,
+    .personal-contact-form textarea:focus,
+    .personal-contact-form select:focus {
+        border-color: #3b4cca;
+        background: #fff;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(59, 76, 202, 0.1);
+    }
+
+    .personal-contact-form textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .personal-contact-form button {
+        background: linear-gradient(to right, #3b4cca, #5a6de0);
+        color: white;
+        font-size: 1.05rem;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 16px rgba(91, 107, 231, 0.3);
+    }
+
+    .personal-contact-form button:hover {
+        background: linear-gradient(to right, #5a6de0, #3b4cca);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 20px rgba(59, 76, 202, 0.4);
+    }
+
+    @media (max-width: 768px) {
+        .personal-contact-wrapper {
+            flex-direction: column;
+            padding: 2.5rem;
+        }
+
+        .personal-contact-info {
+            border-right: none;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .personal-contact-form {
+            padding-left: 0;
+        }
+    }
+
+    .pricing-section {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 1.5rem 2rem;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 20px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .pricing-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #e3350d;
+        text-align: center;
+    }
+
+    .pricing-table {
+        display: flex;
+        gap: 1.2rem;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .pricing-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 250px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 3px solid #3b4cca;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 16px 32px rgba(59, 76, 202, 0.25);
+        border-color: #e3350d;
+    }
+
+    .pricing-card:hover img {
+        transform: rotate(5deg) scale(1.05);
+    }
+
+    .pricing-card.featured {
+        background: #fcefee;
+        border-color: #e3350d;
+    }
+
+    .pricing-card img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 1rem;
+        transition: transform 0.4s ease;
+    }
+
+    .pricing-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        color: #3b4cca;
+        text-align: center;
+    }
+
+    .price {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #2b2e4a;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    .features li {
+        padding: 0.3rem 0;
+        border-bottom: 1px solid #ddd;
+        padding-left: 10px;
+    }
+
+    .features li:last-child {
+        border-bottom: none;
+    }
+
+    .pricing-card p {
+        font-size: 0.85rem;
+        color: #555;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .pricing-card button {
+        background: #e3350d;
+        color: white;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .pricing-card button:hover {
+        background: #c82310;
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 900px) {
+        .pricing-table {
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        html,
+        body {
+            overflow-y: auto;
+        }
+    }
+
+    .modern-body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #f5f9ff;
+        color: #333;
+    }
+
+    /* NAVBAR */
+    .modern-navbar {
+        background-color: #003366;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+    }
+
+    .modern-navbar .modern-logo {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .modern-navbar .modern-nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .modern-navbar .modern-nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .modern-navbar .modern-nav-links li a:hover {
+        color: #ffcc00;
+    }
+
+    /* HERO */
+    .modern-hero {
+        background: url('https://tse2.mm.bing.net/th/id/OIP.5fikY-StQLIWWQSydc4ixAHaEo?r=0&rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center;
+        background-size: cover;
+        padding: 60px 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .modern-hero .modern-hero-title {
+        font-size: 2.8em;
+        margin-bottom: 10px;
+    }
+
+    .modern-booking-form {
+        background: rgba(255, 255, 255, 0.95);
+        max-width: 800px;
+        margin: 30px auto 0;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .modern-booking-form input,
+    .modern-booking-form select,
+    .modern-booking-form button,
+    .modern-booking-form textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        flex: 1 1 45%;
+        font-size: 1em;
+    }
+
+    .modern-booking-form button {
+        background-color: #003366;
+        color: white;
+        border: none;
+        flex: 1 1 100%;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .modern-booking-form button:hover {
+        background-color: #00509e;
+    }
+
+    /* SECTION */
+    .modern-section {
+        padding: 40px 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .modern-card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .modern-card h3 {
+        margin-bottom: 10px;
+        color: #003366;
+    }
+
+    .modern-card button {
+        background: #003366;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .modern-card button:hover {
+        background: #00509e;
+    }
+
+    /* FOOTER */
+    .modern-footer {
+        background: #003366;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+        .modern-booking-form {
+            flex-direction: column;
+        }
+    }
+
+    .holiday-body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to bottom, #ffffff, #e6f7ff);
+        margin: 0;
+        padding: 0;
+        background-image: url('https://www.transparenttextures.com/patterns/snow.png');
+        background-repeat: repeat;
+    }
+
+    .holiday-header {
+        background: #b30000 url('https://tse1.mm.bing.net/th/id/OIP.fjf_1KOLrwU9BhQYNjOoAwHaEo?r=0&rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center;
+        color: rgba(143, 220, 18, 0.88);
+        text-align: center;
+        padding: 30px 20px;
+        background-size: cover;
+    }
+
+    .holiday-header h1 {
+        font-size: 2em;
+        text-shadow: 2px 2px 5px #333;
+        margin-bottom: 5px;
+    }
+
+    .holiday-navbar {
+        background: #fff0e6;
+        text-align: center;
+        padding: 10px 0;
+        border: 2px dashed #cc0000;
+    }
+
+    .holiday-navbar a {
+        margin: 10px 15px;
+        color: #cc0000;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .holiday-navbar a:hover {
+        color: #006600;
+    }
+
+    .holiday-section {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .holiday-article {
+        flex: 1 1 70%;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .holiday-aside {
+        flex: 1 1 25%;
+        background: #f0fff0;
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px dashed #66cc66;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .holiday-card {
+        background: #fffaf0;
+        border: 2px solid #cccccc;
+        border-left: 6px solid #cc0000;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .holiday-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .holiday-card button {
+        padding: 10px 18px;
+        background-color: #cc0000;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .holiday-card button:hover {
+        background-color: #e62e00;
+        transform: scale(1.05);
+        box-shadow: 0 0 10px #ff9999;
+    }
+
+    #destinations,
+    #contact {
+        background: #ffffffc9;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #destinations h2,
+    #contact h2 {
+        color: #cc0000;
+    }
+
+    #contact form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #contact input,
+    #contact textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #contact button {
+        width: fit-content;
+        padding: 10px 20px;
+        background-color: #4d94ff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    #contact button:hover {
+        background-color: #357ae8;
+        transform: scale(1.05);
+    }
+
+    .holiday-footer {
+        background: #004080 url('https://t3.ftcdn.net/jpg/01/34/31/72/360_F_134317274_PTXPn7EjliaYrJrZmfs0x5jFv8dmXsYn.jpg') no-repeat center;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        font-weight: bold;
+        background-size: cover;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .holiday-section {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .holiday-article,
+        .holiday-aside {
+            flex: 1 1 100%;
+            margin: 0;
+        }
+
+        .holiday-navbar a {
+            display: inline-block;
+            margin: 8px 10px;
+            font-size: 14px;
+        }
+
+        .holiday-header h1 {
+            font-size: 1.5em;
+        }
+
+        .holiday-card {
+            padding: 10px;
+        }
+
+        #contact,
+        #destinations {
+            margin: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .holiday-navbar a {
+            display: block;
+            margin: 8px 0;
+        }
+
+        .holiday-card button,
+        #contact button {
+            width: 100%;
+        }
+
+        #contact input,
+        #contact textarea {
+            width: 100%;
+        }
+    }
+
+    /*OLDGEN*/
+
+    .oldgen-body {
+        font-family: 'Georgia', serif;
+        background-color: #f4f1e8;
+        color: #2c1810;
+        line-height: 1.6;
+    }
+
+    .oldgen-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .oldgen-header {
+        background: linear-gradient(135deg, #8b4513, #d2691e);
+        color: #f4f1e8;
+        padding: 2rem 0;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        border-bottom: 4px solid #654321;
+    }
+
+    .oldgen-title {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-weight: bold;
+    }
+
+    .oldgen-subtitle {
+        font-size: 1.2rem;
+        font-style: italic;
+        opacity: 0.9;
+    }
+
+    .oldgen-nav {
+        background-color: #654321;
+        padding: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .oldgen-nav-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .oldgen-nav-item {
+        position: relative;
+    }
+
+    .oldgen-nav-link {
+        color: #f4f1e8;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .oldgen-nav-link:hover {
+        background-color: #8b4513;
+        transform: translateY(-2px);
+    }
+
+    /* Smooth scrolling for anchor links */
+    /* Removed duplicate scroll-behavior: smooth; */
+
+    .oldgen-hero {
+        background: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2835&q=80') center/cover;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 3rem;
+    }
+
+    .oldgen-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .oldgen-hero-content {
+        text-align: center;
+        color: white;
+        z-index: 1;
+        position: relative;
+    }
+
+    .oldgen-hero-title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .oldgen-hero-text {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        font-style: italic;
+    }
+
+    .oldgen-cta-button {
+        background: linear-gradient(45deg, #d2691e, #ff8c00);
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .oldgen-cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .oldgen-main {
+        padding: 3rem 0;
+    }
+
+    .oldgen-promo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .oldgen-promo-card {
+        background: linear-gradient(135deg, #fff8e7, #f4f1e8);
+        border: 3px solid #d2691e;
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .oldgen-promo-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .oldgen-promo-card::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(45deg, #ff8c00, #d2691e);
+        border-radius: 50%;
+        opacity: 0.1;
+    }
+
+    .oldgen-promo-badge {
+        background: linear-gradient(45deg, #d2691e, #ff8c00);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+
+    .oldgen-promo-title {
+        font-size: 1.1rem;
+        color: #654321;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    .oldgen-promo-description {
+        color: #5a4a3a;
+        margin-bottom: 1rem;
+        font-style: italic;
+        font-size: 0.85rem;
+        flex-grow: 1;
+    }
+
+    .oldgen-promo-price {
+        font-size: 1.3rem;
+        color: #d2691e;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .oldgen-promo-original-price {
+        text-decoration: line-through;
+        color: #888;
+        font-size: 0.9rem;
+        margin-right: 0.5rem;
+    }
+
+    .oldgen-promo-button {
+        background: linear-gradient(45deg, #654321, #8b4513);
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .oldgen-promo-button:hover {
+        background: linear-gradient(45deg, #8b4513, #a0522d);
+        transform: scale(1.05);
+    }
+
+    .oldgen-destinations {
+        margin-bottom: 4rem;
+    }
+
+    .oldgen-promos {
+        margin-bottom: 4rem;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #654321;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .oldgen-section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(45deg, #d2691e, #ff8c00);
+    }
+
+    .oldgen-destinations-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 2rem;
+        width: 130%;
+    }
+
+    .oldgen-destination-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        border: 2px solid #e6d3b7;
+        width: 100%;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+    }
+
+    .oldgen-destination-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .oldgen-card-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-bottom: 3px solid #654321;
+    }
+
+    .oldgen-card-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .oldgen-card-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #654321;
+        font-weight: bold;
+    }
+
+    .oldgen-card-description {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        color: #5a4a3a;
+        text-align: justify;
+        flex-grow: 1;
+    }
+
+    .oldgen-card-button {
+        background: linear-gradient(45deg, #654321, #8b4513);
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+    }
+
+    .oldgen-card-button:hover {
+        background: linear-gradient(45deg, #8b4513, #a0522d);
+        transform: scale(1.05);
+    }
+
+    .oldgen-about {
+        background: linear-gradient(135deg, #e6d3b7, #d4c4a8);
+        padding: 3rem;
+        border-radius: 12px;
+        margin: 3rem 0;
+        box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: 2px solid #c8b299;
+    }
+
+    .oldgen-about-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #654321;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .oldgen-about-text {
+        font-size: 1.1rem;
+        text-align: center;
+        color: #2c1810;
+        max-width: 800px;
+        margin: 0 auto;
+        font-style: italic;
+    }
+
+    .oldgen-footer {
+        background-color: #3d2317;
+        color: #3d2317;
+        padding: 3rem 0 2rem;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .oldgen-footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .oldgen-footer-section {
+        text-align: left;
+    }
+
+    .oldgen-footer-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: #d2691e;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .oldgen-footer-text {
+        margin-bottom: 0.5rem;
+        opacity: 0.9;
+    }
+
+    .oldgen-footer-bottom {
+        border-top: 1px solid #654321;
+        padding-top: 1rem;
+        margin-top: 2rem;
+        font-style: italic;
+        opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+        .oldgen-title {
+            font-size: 2rem;
+        }
+
+        .oldgen-hero-title {
+            font-size: 2.5rem;
+        }
+
+        .oldgen-nav-list {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .oldgen-promo-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .oldgen-destinations-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .oldgen-footer-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .oldgen-footer-section {
+            text-align: center;
+        }
+
+        .oldgen-promo-card {
+            padding: 1.5rem;
+        }
+
+        .oldgen-card-content {
+            padding: 1.5rem;
+        }
+    }
+
+    /*Personal*/
+
+    .personal-body {
+        font-family: 'Arial', sans-serif;
+        background: #f8f9fa;
+        color: #2c3e50;
+        line-height: 1.6;
+    }
+
+    .personal-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Header */
+    .personal-header {
+        background: #3b4cca;
+        padding: 1rem 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .personal-header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .personal-logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .personal-nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    .personal-nav-link {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        font-weight: 600;
+    }
+
+    .personal-nav-link:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .personal-hero {
+        background: linear-gradient(rgba(59, 76, 202, 0.7), rgba(59, 76, 202, 0.096)),
+            url('https://static.vecteezy.com/system/resources/thumbnails/024/684/538/small_2x/cute-yellow-mouse-catching-cherry-blossom-petals-background-free-vector.jpg') center/cover;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+    }
+
+    .personal-hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        animation: personal-fadeInUp 1s ease;
+    }
+
+    .personal-hero-content p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        max-width: 1000px;
+        animation: personal-fadeInUp 1s ease 0.3s both;
+    }
+
+    .personal-cta-button {
+        background: #e74c3c;
+        color: #fff;
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        animation: personal-fadeInUp 1s ease 0.6s both;
+    }
+
+    .personal-cta-button:hover {
+        background: #c0392b;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+    }
+
+    /* Travel Planning Section */
+    .personal-travel-planning {
+        padding: 4rem 0;
+        background: #fff;
+    }
+
+    .personal-section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: #3b4cca;
+        position: relative;
+    }
+
+    .personal-section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: #ffcc02;
+        border-radius: 2px;
+    }
+
+    .personal-planning-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .personal-planning-card {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 3px solid transparent;
+    }
+
+    .personal-planning-card:hover {
+        transform: translateY(-10px);
+        border-color: #ffcc02;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .personal-planning-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1rem;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+
+    .personal-planning-icon.personal-route {
+        background-image: url('https://www.pokemon.co.jp/goods/center/img/kyoto.jpg');
+    }
+
+    .personal-planning-icon.personal-hotel {
+        background-image: url('https://images.pokemon.co.jp/info/2019/20190222_01.jpg');
+    }
+
+    .personal-planning-icon.personal-tickets {
+        background-image: url('https://www.pokemon.co.jp/goods/center/img/tokyo_station.jpg');
+    }
+
+    .personal-planning-icon.personal-transport {
+        background-image: url('https://assets.pokemon.com/assets/cms2/img/misc/virtual-backgrounds/masters/pokemon-center.jpg');
+    }
+
+    .personal-planning-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #2c3e50;
+    }
+
+    .personal-planning-card p {
+        margin-bottom: 1.5rem;
+        color: #7f8c8d;
+    }
+
+    .personal-planning-button {
+        background: #3b4cca;
+        color: #fff;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .personal-planning-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(59, 76, 202, 0.3);
+    }
+
+    /* Destinations Section */
+    .personal-destinations {
+        padding: 4rem 0;
+        background: #ffffff;
+    }
+
+    .personal-destinations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+        margin-top: 3rem;
+    }
+
+    .personal-destination-card {
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .personal-destination-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .personal-destination-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-bottom: 4px solid #ffcc02;
+    }
+
+    .personal-destination-content {
+        padding: 2rem;
+    }
+
+    .personal-destination-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #e74c3c;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .personal-destination-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+    }
+
+    .personal-destination-location {
+        color: #7f8c8d;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    .personal-destination-description {
+        margin-bottom: 1.5rem;
+        color: #555;
+        line-height: 1.7;
+    }
+
+    .personal-destination-features {
+        list-style: none;
+        margin-bottom: 1.5rem;
+    }
+
+    .personal-destination-features li {
+        padding: 0.3rem 0;
+        color: #27ae60;
+        font-weight: 600;
+    }
+
+    .personal-destination-features li::before {
+        content: '✓ ';
+        color: #27ae60;
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }
+
+    .personal-destination-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+    }
+
+    .personal-destination-price {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #e74c3c;
+    }
+
+    .personal-destination-button {
+        background: #3b4cca;
+        color: #fff;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .personal-destination-button:hover {
+        background: #2c3e99;
+        transform: scale(1.05);
+    }
+
+    /* Travel Tips Section */
+    .personal-travel-tips {
+        padding: 4rem 0;
+        background: #fff;
+    }
+
+    .personal-tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .personal-tip-card {
+        background: #3b4cca;
+        color: #fff;
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .personal-tip-card:hover {
+        transform: scale(1.05);
+    }
+
+    .personal-tip-icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 1rem;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        filter: brightness(0) invert(1);
+    }
+
+    .personal-tip-icon.personal-budget {
+        background-image: url('https://www.pokemon.co.jp/goods/center/img/tokyo_station.jpg');
+    }
+
+    .personal-tip-icon.personal-apps {
+        background-image: url('https://images.pokemon.co.jp/info/2019/20190222_01.jpg');
+    }
+
+    .personal-tip-icon.personal-culture {
+        background-image: url('https://www.pokemon.co.jp/goods/center/img/kyoto.jpg');
+    }
+
+    .personal-tip-icon.personal-shopping {
+        background-image: url('https://assets.pokemon.com/assets/cms2/img/misc/virtual-backgrounds/masters/pokemon-center.jpg');
+    }
+
+    .personal-tip-icon.personal-timing {
+        background-image: url('https://www.pokemon.co.jp/goods/center/img/tokyo_station.jpg');
+    }
+
+    .personal-tip-icon.personal-shipping {
+        background-image: url('https://images.pokemon.co.jp/info/2019/20190222_01.jpg');
+    }
+
+    .personal-tip-card h3 {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    /* Footer */
+    .personal-footer {
+        background: #2c3e50;
+        color: #fff;
+        padding: 3rem 0 1rem;
+        text-align: center;
+    }
+
+    .personal-footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .personal-footer-section h3 {
+        color: #ffcc02;
+        margin-bottom: 1rem;
+    }
+
+    .personal-footer-section p,
+    .personal-footer-section a {
+        color: #bdc3c7;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .personal-footer-section a:hover {
+        color: #ffcc02;
+    }
+
+    .personal-footer-bottom {
+        border-top: 1px solid #34495e;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        color: #95a5a6;
+    }
+
+    /* Animations */
+    @keyframes personal-fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .personal-header-content {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .personal-nav-menu {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .personal-hero-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .personal-hero-content p {
+            font-size: 1.1rem;
+        }
+
+        .personal-section-title {
+            font-size: 2rem;
+        }
+
+        .personal-destinations-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .personal-planning-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .personal-tips-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+
+    .login-wrapper {
+        min-height: 86.5vh;
+        background: url('https://wallpapers.com/images/high/cute-pokemon-surfing-pikachu-wyxmrvtfadem79kp.webp') center/cover no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background-attachment: fixed;
+    }
+
+    .login-box {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 2rem 3rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        min-width: 350px;
+        width: 100%;
+        margin-left: 25rem;
+        margin-top: -3rem;
+    }
+
+    .login-box h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #3b4cca;
+        text-shadow: 1px 1px 2px #ffcb05;
+    }
+
+    .login-box input {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    .login-box button {
+        background: #ffcb05;
+        color: #3b4cca;
+        font-weight: bold;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .login-box button:hover {
+        background: #f2b807;
+    }
+
+    .login-box p {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .login-box p a {
+        color: #3b4cca;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .login-box p a:hover {
+        text-decoration: underline;
+    }
+
+    .greeting-box {
+        display: flex;
+        text-align: justify;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        max-width: 800px;
+        margin: -10rem auto 0 auto;
+    }
+
+
+    .greeting-box h2 {
+        font-size: 3em;
+        color: #ffffff;
+        margin-bottom: 10px;
+        text-shadow: black -2px 2px 4px;
+    }
+
+    .greeting-box p {
+        font-size: 1.2em;
+        color: #ffffff;
+        text-shadow: black -2px 2px 4px;
+    }
+
+
+    .download-hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px;
+        max-width: 1200px;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+
+    .download-hero-left {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .download-hero-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .download-hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .download-download-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .download-link-text {
+        text-decoration: none;
+        background-color: #93e887;
+        color: #202d38;
+        font-weight: 600;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-align: center;
+        width: fit-content;
+        transition: background 0.3s;
+    }
+
+    .download-link-text:hover {
+        background-color: #0da755;
+    }
+
+    .download-store-btn {
+        height: 50px;
+        width: auto;
+    }
+
+    .download-device {
+        position: relative;
+        width: 300px;
+        height: 600px;
+        flex-shrink: 0;
+        margin-top: 30px;
+    }
+
+    .download-device-screen {
+        position: absolute;
+        top: 19%;
+        left: 35%;
+        width: 73%;
+        height: 77.5%;
+        object-fit: fill;
+        border-radius: 20px;
+        z-index: 2;
+    }
+
+    .download-device-frame {
+        position: absolute;
+        top: 13.8%;
+        left: 11.5%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 22px;
+        z-index: 1;
+    }
+
+    .content-section {
+        padding: 60px;
+        background: url('https://i.pinimg.com/736x/39/3c/e6/393ce636c6ceac0b15ad4c454f247d60.jpg') no-repeat center center;
+        background-size: cover;
+        color: #000000;
+        min-height: 100vh;
+    }
+
+    .content-container {
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        gap: 60px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .content-left {
+        flex: 1;
+        max-width: 700px;
+        text-align: center;
+    }
+
+    .content-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 35px;
+    }
+
+    .content-description {
+        font-size: 1rem;
+        margin-bottom: 25px;
+        color: #000000;
+    }
+
+    .content-image {
+        width: 100%;
+        background-color: #90c2d3;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .content-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+    .content-button {
+        background-color: #7dfd6c;
+        color: #000000;
+        padding: 12px 28px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+
+    .content-button:hover {
+        background-color: #0da755;
+    }
+
+    .content-caption {
+        font-size: 1rem;
+        color: #000000;
+    }
+
+    .content-right {
+        flex: 1;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .content-block h4 {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .content-block p {
+        font-size: 20px;
+        color: #000000;
+        line-height: 1.5;
+    }
+
+    .text-box {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .content-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content-left,
+        .content-right {
+            max-width: 100%;
+        }
+
+        .content-right {
+            margin-top: 40px;
+        }
+    }
